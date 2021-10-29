@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+
+body{
+     font-family: 'Lato', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+ul,nav {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+
+	opacity: 0.9;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+	font-weight: 800;
+	text-align: center;
+}
+.navbar.scrolled{
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    transition: background 500ms;
+}
+
+.page-navbar .navbar-nav .nav-item a{
+    font-weight: bold;
+}
+
+.page-navbar.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.page-navbar .logo{
+    font-size: 1.5rem;
+}
+
+.page-navbar.fixed-top + .page{
+    padding-top: 62px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section:not(.home):nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
+}
+/*Nav Styles*/
+
+nav {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+	color: #fff;
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+/*Home Styles*/
+
+.home {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.home .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+.home h1{
+    font: bold 60px "Open Sans", sans-serif;
+    margin-bottom: 15px;
+}
+
+.home h3 {
+    font: normal 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+}
+
+.home a.btn {
+    padding: 20px 46px;
+}
+
+.home-content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .home {
+        min-height: 600px;
+    }
+    .home h1 {
+        font-size: 48px;
+    }
+    .home h3 {
+        font-size: 24px;
+    }
+    .home a.btn {
+        padding: 15px 40px;
+    }
+}
+
+/*Visualizations Section*/ 
+.visualizations .grid #photos:hover{
+    box-shadow: 0 0 13px rgba(2, 49, 75, 0.2); 
+}
+.visualizations .grid li {
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.visualizations .grid li.small {
+    flex-basis: 30%;
+}
+
+.visualizations .grid li.large {
+    flex-basis: 70%;
+}
+.visualizations .grid #photos {
+    border: 0.5px solid #555;
+}
+
+@media (max-width: 1100px) {
+    .visualizations .grid li.small,
+    .visualizations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .visualizations .grid li.small,
+    .visualizations .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
+/*Skills Section*/
+
+.skills .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.skills .grid li i{
+    color: #8c9eff;
+}
+
+.skills .grid li h4 {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+@media (max-width: 800px) {
+    .skills .grid li {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+
+
+/*Footer Section*/
+
+.page-footer{
+    padding-top: 32px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.page-footer a{
+    display: inline-block;
+    margin: 0px 10px;
+    color: #282b2d;
+    font-size: 18px;
+}
+
+.page-footer .links{
+    display: inline-block;
+}
+
+.page-footer .social-icons{
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.page-footer .social-icons a{
+    font-size: 18px;
+    margin: 0 3px;
+    color: #ffffff;
+    border: 1px solid;
+    opacity: 0.75;
+    border-radius: 50%;
+    width: 36px;
+    display: inline-block;
+    height: 36px;
+    text-align: center;
+    background-color: #c5c9d2;
+    line-height: 34px;
+}
+
+.page-footer .social-icons a:hover{
+    opacity: 1;
+}
